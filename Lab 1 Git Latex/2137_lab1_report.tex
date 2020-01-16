@@ -68,7 +68,7 @@
 
 \section*{Summary}
 
-In this lab, using LaTeX and Git, it was discovered how to use and create tables. It was also learned how to use the Git program and uploading documents. 
+In this lab, using LaTeX and Git, it was discovered how to use and create tables. It was also learned how to use the Git program and uploading documents. Learned the basics of using LaTeX.
 
 
 \section*{Q\&A}
@@ -95,7 +95,7 @@ In this lab, using LaTeX and Git, it was discovered how to use and create tables
 \section*{Results}
 
 \begin{figure}[ht]\centering
-	\begin{tabular}{l|r|r}
+	\begin{tabular}{c|c|c}
 		Binary & Hex & Decimal\\
 		\midrule
 		0000 & 0 & 0 \\
@@ -105,7 +105,7 @@ In this lab, using LaTeX and Git, it was discovered how to use and create tables
 		1000 & 8 & 8 \\
 		1010 & A & 10 \\
 		\bottomrule
-	\end{tabular}\medskip
+	\end{tabular}
 
 	
 	\includegraphics[width=1\textwidth,trim=540 455 15 130,clip]{lab1_example_screenshot.PNG}
@@ -116,10 +116,25 @@ In this lab, using LaTeX and Git, it was discovered how to use and create tables
 
 
 
-
+\clearpage
 \section*{Code}
 
-Include all of the code you wrote or modified here.
+\begin{lstlisting}[style=Verilog,
+caption=Lab 1 Example Code,
+label=code:ex 
+]
+module example
+#(parameter BITS=4)
+(
+input [BITS-1:0] in0, in1,
+input sel,
+output [BITS-1:0] out
+);
+
+// Choose in1 or in0
+out = sel ? in1: in0; 
+endmodule
+\end{lstlisting}
 
 
 \end{document}
